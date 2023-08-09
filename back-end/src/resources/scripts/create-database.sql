@@ -1,0 +1,1 @@
+CREATE DATABASE tag_counter_db;

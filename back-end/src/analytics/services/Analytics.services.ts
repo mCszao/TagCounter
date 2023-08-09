@@ -1,0 +1,46 @@
+import { QueryResult } from 'pg';
+
+import { v4 } from 'uuid';
+
+import { IAnalyticsDTO } from '../dto/Analytics.dto';
+import { AnalyticsModel } from '../model/Analytics.model';
+import { AnalyticsRepository } from '../repository/Analytics.repository';
+import { CounterRepository } from '../../counter/repository/counter.repository';
+import { CounterModel } from '../../counter/model/counter.model';
+
+class AnalyticsService {
+    private AnalyticsRepo = new AnalyticsRepository();
+    private CounterRepo = new CounterRepository();
+
+    public async insert(dto: IAnalyticsDTO) {
+        const id = v4();
+        const analyticsModel = new AnalyticsModel(id, dto.url);
+        await this.AnalyticsRepo.save(analyticsModel);
+        try {
+            dto.tagSet.forEach((tag) => {
+                const counterModel = new CounterModel(
+                    id,
+                    tag.tagSelector,
+                    tag.tot
+                );
+                this.CounterRepo.save(counterModel);
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    public async selectByUrl(url: string) {
+        try {
+            const response = (await this.AnalyticsRepo.findByUrl(
+                url
+            )) as QueryResult;
+            if (response.rowCount === 0) return;
+            return response.rows;
+        } catch (error: any) {
+            console.log(error.message);
+        }
+    }
+}
+
+export default new AnalyticsService();

@@ -1,0 +1,4 @@
+CREATE TABLE analytics(
+ id UUID NOT NULL PRIMARY KEY, 
+ url TEXT NOT NULL
+);
