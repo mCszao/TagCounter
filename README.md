@@ -6,7 +6,7 @@ Sistema Contador de tags de páginas estáticas em formato html com integração
     Frontend:
         Linguagens: HMT5, CSS3 e JAVASCRIPT
         Bibliotecas: Vite
-    Backend
+    Backend:
         Linguagem: TypeScript
         Bibliotecas: tsx, express, uuid, pg, cors (todos com seus respectivos @types)
 
@@ -33,8 +33,10 @@ Antes de prosseguir com a instalação, certifique-se de ter os seguintes requis
 
 # Comandos de Inicialização
 
-No Frontend: - Navegue até a pasta front-end e execute o comando yarn dev ou do gerenciador escolhido.
+    Frontend:
+        - Navegue até a pasta front-end e execute o comando yarn dev ou do gerenciador escolhido.
 
-No Frontend: - Navegue até a pasta back-end e execute o comando yarn dev ou do gerenciador escolhido.
+    No Backend:
+        - Navegue até a pasta back-end e execute o comando yarn dev ou do gerenciador escolhido.
 ----Contato
 Quaisquer dúvidas ou problemas/obstáculos encontrados que eu possa corrigir ou sugestões estarei disponível no email: marc.khk11@gmail.com
