@@ -1,13 +1,14 @@
 ### TAG COUNTER
 
 Sistema Contador de tags de páginas estáticas em formato html com integração ao banco de dados.
-Stack Utilizada
--Frontend
-Linguagens: HMT5, CSS3 e JAVASCRIPT
-Bibliotecas: Vite
--Backend
-Linguagem: TypeScript
-Bibliotecas: tsx, express, uuid, pg, cors (todos com seus respectivos @types)
+
+# Stack Utilizada
+    Frontend:
+        Linguagens: HMT5, CSS3 e JAVASCRIPT
+        Bibliotecas: Vite
+    Backend
+        Linguagem: TypeScript
+        Bibliotecas: tsx, express, uuid, pg, cors (todos com seus respectivos @types)
 
 # Requisitos
 
