@@ -3,7 +3,7 @@
 Sistema Contador de tags de páginas estáticas em formato html com integração ao banco de dados.
 Stack Utilizada
 -Frontend
-Linguages: HMT5, CSS3 e JAVASCRIPT
+Linguagens: HMT5, CSS3 e JAVASCRIPT
 Bibliotecas: Vite
 -Backend
 Linguagem: TypeScript
